@@ -129,11 +129,13 @@ const Detail = () => {
           <div className="flex flex-col md:flex-row md:justify-between gap-2">
             <div className="flex gap-2">
               {comment.reply && (
-                <PiArrowElbowDownRight className="text-xl flex-shrink-0" />
+                <>
+                  <PiArrowElbowDownRight className="text-xl flex-shrink-0" />
+                  <div className="break-all truncate max-w-40 text-gray-300">
+                    {comment.replyTo}
+                  </div>
+                </>
               )}
-              <div className="break-all truncate max-w-40 text-gray-300">
-                {comment.replyTo}
-              </div>
               <div className="break-all">{comment.content}</div>
             </div>
             <div
